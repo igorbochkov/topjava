@@ -5,7 +5,8 @@
     <title>Meals</title>
 </head>
 <body>
-
+<a href="index.html">HOME</a>
+<hr>
 <table frame="border" rules="all" align="center" border="1">
     <caption>MEALS</caption>
     <tr>
@@ -27,19 +28,18 @@
                 <td>${meal.getDateTime().toLocalDate()} ${meal.getDateTime().toLocalTime()}</td>
                 <td>${meal.getDescription()}</td>
                 <td>${meal.getCalories()}</td>
-                <td>Update</td>
-                <td>Delete</td>
+                <td><a href="update?id=${meal.getId()}">Update</a></td>
+                <td><a href="delete?id=${meal.getId()}">Delete</a> </td>
             </tr>
         </c:if>
-
         <c:if test="${meal.isExcess() != true}">
             <tr style="color: green">
                 <td>${meal.getId()}</td>
                 <td>${meal.getDateTime().toLocalDate()} ${meal.getDateTime().toLocalTime()}</td>
                 <td>${meal.getDescription()}</td>
                 <td>${meal.getCalories()}</td>
-                <td>Update</td>
-                <td>Delete</td>
+                <td><a href="update?id=${meal.getId()}">Update</a></td>
+                <td><a href="delete?id=${meal.getId()}">Delete</a> </td>
             </tr>
         </c:if>
 
@@ -47,6 +47,6 @@
 </table>
 
 <hr>
-<a href="index.html">HOME</a>
+<a href="new.jsp">Add new Meal</a>
 </body>
 </html>

@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
@@ -60,9 +59,11 @@ public class MealsUtil {
     }
 
     public static List<Meal> getMeals() {
-        if (meals != null) return meals;
+        if (meals != null) {
+            return meals;
+        }
         else {
-            List<Meal> meals = new ArrayList<>();
+            meals = new ArrayList<>();
             meals.add(new Meal(LocalDateTime.of(2020, Month.JANUARY, 30, 10, 0), "Завтрак", 500));
             meals.add(new Meal(LocalDateTime.of(2020, Month.JANUARY, 30, 13, 0), "Обед", 1000));
             meals.add(new Meal(LocalDateTime.of(2020, Month.JANUARY, 30, 20, 0), "Ужин", 500));
@@ -70,8 +71,9 @@ public class MealsUtil {
             meals.add(new Meal(LocalDateTime.of(2020, Month.JANUARY, 31, 10, 0), "Завтрак", 1000));
             meals.add(new Meal(LocalDateTime.of(2020, Month.JANUARY, 31, 13, 0), "Обед", 500));
             meals.add(new Meal(LocalDateTime.of(2020, Month.JANUARY, 31, 20, 0), "Ужин", 410));
-            return meals;
+            meals.add(new Meal(LocalDateTime.of(2020, Month.JANUARY, 28, 13, 0), "Обед", 680));
         }
+        return meals;
     }
 
     public static void main(String[] args) {
