@@ -8,20 +8,21 @@
 <hr>
 
 <h2>Add new Meal</h2>
-<form action="new" method="post    ">
+
+<form action="new" method="get">
     <label for="data">DataTime</label>
-    <input type="datetime-local" id="data">
+    <input type="datetime-local" id="data" name="data">
     <br>
 
     <label for="description">Description</label>
-    <input id="description">
+    <input type="text" id="description" name="description">
     <br>
 
     <label for="calories">Calories</label>
-    <input id="calories">
+    <input type="text" id="calories" name="calories">
     <br>
 
-    <input type="submit"/>
+    <input type="submit" value="SAVE"/>
 </form>
 </body>
 </html>

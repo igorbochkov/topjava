@@ -16,7 +16,7 @@ import java.io.IOException;
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class DeleteMealServlet extends HttpServlet {
-    private static final Logger log = getLogger(UserServlet.class);
+    private static final Logger log = getLogger(DeleteMealServlet.class);
 
     MealDAO mealDAO = new MealDAOImpl();
     MealService mealService = new MealServiceImpl(mealDAO);
@@ -28,6 +28,7 @@ public class DeleteMealServlet extends HttpServlet {
 
         mealService.deleteMealById(Long.parseLong(id));
 
-        req.getRequestDispatcher("/meals").forward(req, resp);
+        resp.sendRedirect("meals");
+//        req.getRequestDispatcher("/meals").forward(req, resp);
     }
 }

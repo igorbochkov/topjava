@@ -30,8 +30,9 @@ public class MealDAOImpl implements ru.javawebinar.topjava.DAO.MealDAO {
 
     @Override
     public void editMealById(long id, Meal meal) {
+
         Meal mealIndex = mealList.stream().filter(meals -> meals.getId() == id).findFirst().orElse(null);
-        mealList.add(mealList.indexOf(mealIndex),meal);
+        mealList.set(mealList.indexOf(mealIndex),meal);
     }
 
     @Override

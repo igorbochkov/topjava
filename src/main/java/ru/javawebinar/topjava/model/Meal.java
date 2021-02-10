@@ -23,6 +23,13 @@ public class Meal {
         this.calories = calories;
     }
 
+    public Meal(long id,LocalDateTime dateTime, String description, int calories) {
+        this.id = id;
+        this.dateTime = dateTime;
+        this.description = description;
+        this.calories = calories;
+    }
+
     public LocalDateTime getDateTime() {
         return dateTime;
     }
@@ -45,5 +52,17 @@ public class Meal {
 
     public long getId() {
         return this.id;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "id=" + id +
+                ", dateTime=" + dateTime +
+                ", description='" + description + '\'' +
+                ", calories=" + calories +
+                '}';
     }
 }

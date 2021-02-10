@@ -52,4 +52,13 @@
         <url-pattern>/update</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>prepareToUpdateMeal</servlet-name>
+        <servlet-class>ru.javawebinar.topjava.web.PrepareToUpdateMealServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>prepareToUpdateMeal</servlet-name>
+        <url-pattern>/prepareUpdate</url-pattern>
+    </servlet-mapping>
+
 </web-app>

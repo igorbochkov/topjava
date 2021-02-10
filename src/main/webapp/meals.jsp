@@ -28,7 +28,7 @@
                 <td>${meal.getDateTime().toLocalDate()} ${meal.getDateTime().toLocalTime()}</td>
                 <td>${meal.getDescription()}</td>
                 <td>${meal.getCalories()}</td>
-                <td><a href="update?id=${meal.getId()}">Update</a></td>
+                <td><a href="prepareUpdate?id=${meal.getId()}">Update</a></td>
                 <td><a href="delete?id=${meal.getId()}">Delete</a> </td>
             </tr>
         </c:if>
@@ -38,7 +38,7 @@
                 <td>${meal.getDateTime().toLocalDate()} ${meal.getDateTime().toLocalTime()}</td>
                 <td>${meal.getDescription()}</td>
                 <td>${meal.getCalories()}</td>
-                <td><a href="update?id=${meal.getId()}">Update</a></td>
+                <td><a href="prepareUpdate?id=${meal.getId()}">Update</a></td>
                 <td><a href="delete?id=${meal.getId()}">Delete</a> </td>
             </tr>
         </c:if>
